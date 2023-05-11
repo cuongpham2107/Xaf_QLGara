@@ -1,0 +1,14 @@
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\bin\Debug\net6.0\DXApplication.Module.deps.json
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\bin\Debug\net6.0\DXApplication.Module.dll
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\bin\Debug\net6.0\DXApplication.Module.pdb
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.csproj.AssemblyReference.cache
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.Resource.resources
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.csproj.GenerateResource.cache
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.AssemblyInfoInputs.cache
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.AssemblyInfo.cs
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.csproj.CoreCompileInputs.cache
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.dll
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\refint\DXApplication.Module.dll
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\DXApplication.Module.pdb
+C:\Users\phamcuong\source\repos\DevExpressXAF_Release\DXApplication.Module\obj\Debug\net6.0\ref\DXApplication.Module.dll
