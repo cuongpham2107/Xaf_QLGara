@@ -6,24 +6,25 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DXApplication.Blazor.Common;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using static DXApplication.Blazor.Common.Enums;
 
 namespace DXApplication.Module.BusinessObjects.Accessary
 {
     [DefaultClassOptions]
-    //[ImageName("BO_Contact")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class InWarehouse : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
+    [XafDisplayName("Nhập")]
+    [DefaultProperty(nameof(TenPhieu))]
+    [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
+    [ListViewFindPanel(true)]
+    [LookupEditorMode(LookupEditorMode.AllItemsWithSearch)]
+    [NavigationItem(Menu.MenuAccessary)]
+    public class InWarehouse : Bill
+    { 
         public InWarehouse(Session session)
             : base(session)
         {
@@ -31,21 +32,27 @@ namespace DXApplication.Module.BusinessObjects.Accessary
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+           
         }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
+        private TrangThaiNhap trangThaiNhap;
+
+
+        [XafDisplayName("Trạng thái")]
+        public TrangThaiNhap TrangThaiNhap
+        {
+            get => trangThaiNhap;
+            set => SetPropertyValue(nameof(TrangThaiNhap), ref trangThaiNhap, value);
+        }
+
+        //[Association("Bill-Accessarys")]
+        //[XafDisplayName("Danh sách phụ tùng")]
+        //public XPCollection<Accessaries> Accessarys
+        //{
+        //    get
+        //    {
+        //        return GetCollection<Accessaries>(nameof(Accessarys));
+        //    }
         //}
     }
 }

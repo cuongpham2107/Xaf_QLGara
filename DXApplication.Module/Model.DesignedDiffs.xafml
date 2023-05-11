@@ -2,16 +2,88 @@
 <Application Title="DXApplication">
   <BOModel>
     <Class Name="DevExpress.Persistent.BaseImpl.PermissionPolicy.PermissionPolicyUser" Caption="Base User" />
+    <Class Name="DXApplication.Module.BusinessObjects.Accessary.Accessaries">
+      <AppearanceRules>
+        <AppearanceRule Id="TinhTrang_1" FontStyle="Bold" BackColor="LimeGreen" />
+        <AppearanceRule Id="TinhTrang_3" BackColor="Red" />
+      </AppearanceRules>
+    </Class>
   </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Quản lý Gara" Index="0" ImageName="garage">
+        <Items>
+          <Item Id="Accessaries_ListView" ImageName="brake" />
+          <Item Id="Bill_ListView" ImageName="bill">
+            <Items>
+              <Item Id="InWarehouse_ListView" ViewId="InWarehouse_ListView" ObjectKey="" ImageName="bill" IsNewNode="True" />
+              <Item Id="OutWarehouse_ListView" ViewId="OutWarehouse_ListView" ObjectKey="" ImageName="bill" IsNewNode="True" />
+            </Items>
+          </Item>
+          <Item Id="Cars_ListView" ImageName="car" />
+          <Item Id="CarService_ListView" ImageName="box" />
+          <Item Id="Garas_ListView" ImageName="garage" />
+          <Item Id="InWarehouse_ListView" Removed="True" />
+          <Item Id="OutWarehouse_ListView" Removed="True" />
+        </Items>
+      </Item>
+      <Item Id="Quản lý khách hàng" Index="1" ImageName="rating">
+        <Items>
+          <Item Id="Customers_ListView" ImageName="teamwork" />
+          <Item Id="Debt_ListView" ImageName="debt" />
+        </Items>
+      </Item>
+      <Item Id="Reports" ImageName="BO_Report" />
+      <Item Id="State Machine" QuickAccessItem="True" Visible="False" />
+    </Items>
+  </NavigationItems>
   <Options>
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
   <SchemaModules>
-    <SchemaModule Name="CloneObjectModule" Version="22.2.3.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="22.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="CloneObjectModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <DetailView Id="Accessaries_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Detail" Caption="Chi tiết" RelativeSize="30.489731437598735">
+            <LayoutGroup Id="Detail_col1" RelativeSize="37.07713125845738">
+              <LayoutItem Id="TenPhuTung" RelativeSize="20" />
+              <LayoutItem Id="HangSanXuat" RelativeSize="15" />
+              <LayoutItem Id="NhaCungCap" RelativeSize="15" />
+              <LayoutItem Id="Ngay" RelativeSize="15" />
+              <LayoutItem Id="Thang" RelativeSize="15" />
+              <LayoutItem Id="Nam" RelativeSize="20" />
+            </LayoutGroup>
+            <LayoutGroup Id="Detail_col2" RelativeSize="62.92286874154262" Caption="Detail_col2" Direction="Horizontal">
+              <LayoutGroup Id="Auto91a00cdc-9221-47dd-b172-76c8ef5970a1" ShowCaption="False" Caption="Auto91a00cdc-9221-47dd-b172-76c8ef5970a1(11)" Index="0" RelativeSize="54.193548387096776" IsNewNode="True">
+                <LayoutItem Id="SoLuong" ViewItem="SoLuong" Index="0" RelativeSize="20" IsNewNode="True" />
+                <LayoutItem Id="GiaNhap" ViewItem="GiaNhap" Index="1" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="GiaBan" ViewItem="GiaBan" Index="2" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="HanSuDung" ViewItem="HanSuDung" Index="3" RelativeSize="15" IsNewNode="True" />
+                <LayoutItem Id="TinhTrang" ViewItem="TinhTrang" Index="4" RelativeSize="35" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="GiaNhap" ViewItem="GiaNhap" Index="0" RelativeSize="28.571428571428573" Removed="True" />
+              <LayoutItem Id="GiaBan" ViewItem="GiaBan" Index="1" RelativeSize="21.428571428571427" Removed="True" />
+              <LayoutItem Id="HinhAnh" ViewItem="HinhAnh" Index="1" RelativeSize="45.806451612903224" IsNewNode="True" />
+              <LayoutItem Id="HanSuDung" ViewItem="HanSuDung" Index="2" RelativeSize="21.428571428571427" Removed="True" />
+              <LayoutItem Id="TinhTrang" RelativeSize="28.571428571428573" Index="3" Removed="True" />
+              <LayoutItem Id="SoLuong" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="SimpleEditors" RelativeSize="5.371248025276461">
+            <LayoutGroup Id="Accessaries" RelativeSize="100" Caption="Hình ảnh">
+              <LayoutItem Id="HinhAnh" ViewItem="HinhAnh" Index="0" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="Cars_Group" Direction="Vertical" RelativeSize="64.13902053712481">
+            <LayoutItem Id="Cars" RelativeSize="100" />
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
     <ListView Id="ApplicationUser_ListView" Caption="Users" />
-    <ListView Id="Personnel_ListView" NewItemRowPosition="Bottom" />
   </Views>
 </Application>

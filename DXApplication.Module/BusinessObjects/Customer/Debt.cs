@@ -6,24 +6,29 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DXApplication.Blazor.Common;
+using DXApplication.Module.Extension;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
+using static DXApplication.Blazor.Common.Enums;
 
 namespace DXApplication.Module.BusinessObjects.Customer
 {
     [DefaultClassOptions]
-    //[ImageName("BO_Contact")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
+    //[ImageName("checklist")]
+    [XafDisplayName("Công nợ")]
+    [DefaultProperty(nameof(SoChungTu))]
+    [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
+    [ListViewFindPanel(true)]
+    [LookupEditorMode(LookupEditorMode.AllItemsWithSearch)]
+    [NavigationItem(Menu.MenuCustomer)]
+    [CustomDetailView(Tabbed = true)]
+
     public class Debt : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
+    { 
         public Debt(Session session)
             : base(session)
         {
@@ -31,21 +36,72 @@ namespace DXApplication.Module.BusinessObjects.Customer
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            
         }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
-        //}
+        int tongSoTien;
+        bool trangThai;
+        string ghiChu;
+        int nam;
+        int thang;
+        DateTime? ngay;
+        string noiDung;
+        string soChungTu;
+        LoaiCongNo loaiCongNo;
+        [XafDisplayName("Loại Công nợ")]
+        public LoaiCongNo LoaiCongNo
+        {
+            get => loaiCongNo;
+            set => SetPropertyValue(nameof(LoaiCongNo), ref loaiCongNo, value);
+        }
+        [XafDisplayName("Số chứng từ")]
+        public string SoChungTu
+        {
+            get => soChungTu;
+            set => SetPropertyValue(nameof(SoChungTu), ref soChungTu, value);
+        }
+        [XafDisplayName("Nội dung")]
+        public string NoiDung
+        {
+            get => noiDung;
+            set => SetPropertyValue(nameof(NoiDung), ref noiDung, value);
+        }
+        [XafDisplayName("Ngày")]
+        public DateTime? Ngay
+        {
+            get => ngay;
+            set => SetPropertyValue(nameof(Ngay), ref ngay, value);
+        }
+        [XafDisplayName("Tháng")]
+        public int Thang
+        {
+            get => thang;
+            set => SetPropertyValue(nameof(Thang), ref thang, value);
+        }
+        [XafDisplayName("Năm")]
+        public int Nam
+        {
+            get => nam;
+            set => SetPropertyValue(nameof(Nam), ref nam, value);
+        }
+        [XafDisplayName("Tổng số tiền")]
+        public int TongSoTien
+        {
+            get => tongSoTien;
+            set => SetPropertyValue(nameof(TongSoTien), ref tongSoTien, value);
+        }
+        [XafDisplayName("Trạng thái")]
+        public bool TrangThai
+        {
+            get => trangThai;
+            set => SetPropertyValue(nameof(TrangThai), ref trangThai, value);
+        }
+        [XafDisplayName("Ghi chú")]
+        public string GhiChu
+        {
+            get => ghiChu;
+            set => SetPropertyValue(nameof(GhiChu), ref ghiChu, value);
+        }
+
     }
 }

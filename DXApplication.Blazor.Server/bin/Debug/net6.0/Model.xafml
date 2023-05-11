@@ -9,7 +9,7 @@
   <NavigationItems NavigationStyle="Accordion" StartupNavigationItem="My Dashboard">
     <Items>
       <DashboardNavigationItem Id="My Dashboard" Caption="Trang chủ" DashboardTitle="My Dashboard" Index="0" IsNewNode="True" />
-      <Item Id="Default">
+      <Item Id="Default" ImageName="ModelEditor_Settings">
         <Items>
           <Item Id="Settings" ImageName="ScatterChartLabelOptions" ViewId="ModelDifference_ListView" Caption="Settings" IsNewNode="True" />
         </Items>
@@ -17,8 +17,8 @@
     </Items>
   </NavigationItems>
   <SchemaModules>
-    <SchemaModule Name="CloneObjectModule" Version="22.2.3.0" IsNewNode="True" />
-    <SchemaModule Name="SystemModule" Version="22.2.3.0" IsNewNode="True" />
+    <SchemaModule Name="CloneObjectModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
 </Application>

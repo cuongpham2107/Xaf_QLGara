@@ -6194,23 +6194,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\phamcuong\\.nuget\\packages\\": {},
+    "C:\\Users\\cuong\\.nuget\\packages\\": {},
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\phamcuong\\source\\repos\\DevExpressXAF_Release\\DXApplication.Module\\DXApplication.Module.csproj",
+      "projectUniqueName": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Module\\DXApplication.Module.csproj",
       "projectName": "DXApplication.Module",
-      "projectPath": "C:\\Users\\phamcuong\\source\\repos\\DevExpressXAF_Release\\DXApplication.Module\\DXApplication.Module.csproj",
-      "packagesPath": "C:\\Users\\phamcuong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\phamcuong\\source\\repos\\DevExpressXAF_Release\\DXApplication.Module\\obj\\",
+      "projectPath": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Module\\DXApplication.Module.csproj",
+      "packagesPath": "C:\\Users\\cuong\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Module\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
       ],
       "configFilePaths": [
-        "C:\\Users\\phamcuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

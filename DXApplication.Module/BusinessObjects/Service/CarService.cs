@@ -6,6 +6,10 @@ using DevExpress.Persistent.Base;
 using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
+using DXApplication.Blazor.Common;
+using DXApplication.Module.BusinessObjects.Car;
+using DXApplication.Module.BusinessObjects.Customer;
+using DXApplication.Module.Extension;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,15 +19,14 @@ using System.Text;
 namespace DXApplication.Module.BusinessObjects.Service
 {
     [DefaultClassOptions]
-    //[ImageName("BO_Contact")]
-    //[DefaultProperty("DisplayMemberNameForLookupEditorsOfThisType")]
-    //[DefaultListViewOptions(MasterDetailMode.ListViewOnly, false, NewItemRowPosition.None)]
-    //[Persistent("DatabaseTableName")]
-    // Specify more UI options using a declarative approach (https://documentation.devexpress.com/#eXpressAppFramework/CustomDocument112701).
-    public class CarService : BaseObject
-    { // Inherit from a different class to provide a custom primary key, concurrency and deletion behavior, etc. (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument113146.aspx).
-        // Use CodeRush to create XPO classes and properties with a few keystrokes.
-        // https://docs.devexpress.com/CodeRushForRoslyn/118557
+    [XafDisplayName("Dịch vụ")]
+    [DefaultProperty(nameof(TenDichVu))]
+    [DefaultListViewOptions(MasterDetailMode.ListViewOnly, true, NewItemRowPosition.Top)]
+    [ListViewFindPanel(true)]
+    [LookupEditorMode(LookupEditorMode.AllItemsWithSearch)]
+    [NavigationItem(Menu.MenuAccessary)]
+    public class CarService : BaseObject, IListViewInline
+    { 
         public CarService(Session session)
             : base(session)
         {
@@ -31,21 +34,45 @@ namespace DXApplication.Module.BusinessObjects.Service
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            
         }
-        //private string _PersistentProperty;
-        //[XafDisplayName("My display name"), ToolTip("My hint message")]
-        //[ModelDefault("EditMask", "(000)-00"), Index(0), VisibleInListView(false)]
-        //[Persistent("DatabaseColumnName"), RuleRequiredField(DefaultContexts.Save)]
-        //public string PersistentProperty {
-        //    get { return _PersistentProperty; }
-        //    set { SetPropertyValue(nameof(PersistentProperty), ref _PersistentProperty, value); }
-        //}
 
-        //[Action(Caption = "My UI Action", ConfirmationMessage = "Are you sure?", ImageName = "Attention", AutoCommit = true)]
-        //public void ActionMethod() {
-        //    // Trigger a custom business logic for the current record in the UI (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112619.aspx).
-        //    this.PersistentProperty = "Paid";
-        //}
+        string ghiChu;
+        int gia;
+        Customers customers;
+        Cars cars;
+        string tenDichVu;
+        [XafDisplayName("Tên dịch vụ")]
+        [RuleRequiredField("Bắt buộc phải có CarService.TenDichVu", DefaultContexts.Save, "Trường dữ liệu không được để trống")]
+        public string TenDichVu
+        {
+            get => tenDichVu;
+            set => SetPropertyValue(nameof(TenDichVu), ref tenDichVu, value);
+        }
+        [XafDisplayName("Xe")]
+        public Cars Cars
+        {
+            get => cars;
+            set => SetPropertyValue(nameof(Cars), ref cars, value);
+        }
+        [XafDisplayName("Khách hàng")]
+        public Customers Customers
+        {
+            get => customers;
+            set => SetPropertyValue(nameof(Customers), ref customers, value);
+        }
+        [XafDisplayName("Giá")]
+        public int Gia
+        {
+            get => gia;
+            set => SetPropertyValue(nameof(Gia), ref gia, value);
+        }
+        [XafDisplayName("Ghi chú")]
+        [Size(SizeAttribute.Unlimited)]
+        public string GhiChu
+        {
+            get => ghiChu;
+            set => SetPropertyValue(nameof(GhiChu), ref ghiChu, value);
+        }
     }
 }

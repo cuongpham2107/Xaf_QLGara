@@ -19,9 +19,25 @@
     <Compile Remove="Extension\_Draft.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Images\bill.png" />
+    <None Remove="Images\box.png" />
+    <None Remove="Images\brake.png" />
+    <None Remove="Images\car.png" />
+    <None Remove="Images\debt.png" />
+    <None Remove="Images\garage.png" />
+    <None Remove="Images\rating.png" />
+    <None Remove="Images\teamwork.png" />
     <None Remove="Model.DesignedDiffs.xafml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Images\bill.png" />
+    <EmbeddedResource Include="Images\box.png" />
+    <EmbeddedResource Include="Images\brake.png" />
+    <EmbeddedResource Include="Images\car.png" />
+    <EmbeddedResource Include="Images\debt.png" />
+    <EmbeddedResource Include="Images\garage.png" />
+    <EmbeddedResource Include="Images\rating.png" />
+    <EmbeddedResource Include="Images\teamwork.png" />
     <EmbeddedResource Include="Model.DesignedDiffs.xafml" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +72,15 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="BusinessObjects\Categories\" />
     <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="UnusableNodes.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
+    <None Update="UnusableNodes1.xml">
+      <DependentUpon>Model.DesignedDiffs.xafml</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>
