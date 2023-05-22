@@ -10,6 +10,8 @@ using DXApplication.Module.BusinessObjects.Gara;
 using DXApplication.Blazor.Common;
 using DXApplication.Module.Extension;
 using DevExpress.Persistent.Validation;
+using static DXApplication.Blazor.Common.Enums;
+using System.Runtime.InteropServices;
 
 namespace DXApplication.Module.BusinessObjects.Car
 {
@@ -98,6 +100,21 @@ namespace DXApplication.Module.BusinessObjects.Car
         {
             get => ghiChu;
             set => SetPropertyValue(nameof(GhiChu), ref ghiChu, value);
+        }
+        private string noiDung;
+        [XafDisplayName("Dịch vụ sử dụng")]
+        [RuleRequiredField("Bắt buộc phải có Cars.NoiDung", DefaultContexts.Save, "Trường dữ liệu không được để trống")]
+        public string NoiDung
+        {
+            get { return noiDung; }
+            set { noiDung = value; }
+        }
+        private TrangThaiXe trangThaiXe;
+        [XafDisplayName("Trạng thái")]
+        public TrangThaiXe TrangThaiXe
+        {
+            get { return trangThaiXe; }
+            set { trangThaiXe = value; }
         }
 
         [XafDisplayName("Danh sách phụ tùng")]

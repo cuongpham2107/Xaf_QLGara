@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Logo="ExpressAppLogo">
+  <NavigationItems NavigationStyle="Accordion" DefaultChildItemsDisplayStyle="List">
+    <Items>
+      <Item Id="Quản lý Gara" ImageName="">
+        <Items>
+          <Item Id="Accessaries_ListView" ImageName="" />
+          <Item Id="Bill_ListView" ImageName="">
+            <Items>
+              <Item Id="InWarehouse_ListView" ImageName="" />
+              <Item Id="OutWarehouse_ListView" ImageName="" />
+            </Items>
+          </Item>
+          <Item Id="Cars_ListView" ImageName="" />
+          <Item Id="CarService_ListView" ImageName="" />
+          <Item Id="Garas_ListView" ImageName="" />
+        </Items>
+      </Item>
+      <Item Id="Quản lý khách hàng" ImageName="">
+        <Items>
+          <Item Id="Customers_ListView" ImageName="" />
+          <Item Id="Debt_ListView" ImageName="" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Options UIType="TabbedMDI" FormStyle="Ribbon" />
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerModuleBase" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SchedulerWindowsFormsModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemWindowsFormsModule" Version="22.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Accessaries_DetailView" ImageName="" />
+    <ListView Id="Accessaries_ListView" ImageName="" />
+    <ListView Id="Accessaries_LookupListView" ImageName="" />
+    <ListView Id="Cars_Accessarys_ListView" ImageName="" />
+    <ListView Id="InWarehouse_Accessarys_ListView" ImageName="" />
+    <ListView Id="OutWarehouse_Accessarys_ListView" ImageName="" />
+  </Views>
+</Application>

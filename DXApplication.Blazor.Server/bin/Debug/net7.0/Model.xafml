@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="KennaTech JSC." Company="KennaTech JSC." Copyright="KennaTech JSC." Description="KennaTech JSC.">
+  <ActionDesign>
+    <Actions>
+      <Action Id="DialogCancel" Caption="Đóng" />
+      <Action Id="Refresh" PaintStyle="Image" />
+    </Actions>
+  </ActionDesign>
+  <NavigationItems NavigationStyle="Accordion" StartupNavigationItem="My Dashboard">
+    <Items>
+      <DashboardNavigationItem Id="My Dashboard" Caption="Trang chủ" DashboardTitle="My Dashboard" Index="0" IsNewNode="True" />
+      <Item Id="Default" ImageName="ModelEditor_Settings">
+        <Items>
+          <Item Id="Settings" ImageName="ScatterChartLabelOptions" ViewId="ModelDifference_ListView" Caption="Settings" IsNewNode="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="22.2.6.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="22.2.6.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views DefaultListEditor="DevExpress.ExpressApp.Blazor.Editors.DxGridListEditor" />
+</Application>

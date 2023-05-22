@@ -7,6 +7,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 using DXApplication.Blazor.Common;
+using DXApplication.Module.BusinessObjects.Accessary;
 using DXApplication.Module.BusinessObjects.Car;
 using DXApplication.Module.BusinessObjects.Customer;
 using DXApplication.Module.Extension;
@@ -67,6 +68,15 @@ namespace DXApplication.Module.BusinessObjects.Service
             get => gia;
             set => SetPropertyValue(nameof(Gia), ref gia, value);
         }
+        private Bill bill;
+        [XafDisplayName("Hoá đơn")]
+        [Association("Bill-CarServices")]
+        public Bill Bill
+        {
+            get { return bill; }
+            set { SetPropertyValue(nameof(Bill), ref bill, value); }
+        }
+
         [XafDisplayName("Ghi chú")]
         [Size(SizeAttribute.Unlimited)]
         public string GhiChu

@@ -1,0 +1,227 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\Api_middle.MiddleTierWebApi\\Api_middle.MiddleTierWebApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\Api_middle.MiddleTierWebApi\\Api_middle.MiddleTierWebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\Api_middle.MiddleTierWebApi\\Api_middle.MiddleTierWebApi.csproj",
+        "projectName": "Api_middle.MiddleTierWebApi",
+        "projectPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\Api_middle.MiddleTierWebApi\\Api_middle.MiddleTierWebApi.csproj",
+        "packagesPath": "C:\\Users\\phamcuong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\Api_middle.MiddleTierWebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\phamcuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj": {
+                "projectPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DevExpress.ExpressApp.Api.Xpo.All": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.CodeAnalysis": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Security.AspNetCore.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj",
+        "projectName": "DXApplication.Module",
+        "projectPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj",
+        "packagesPath": "C:\\Users\\phamcuong\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\phamcuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "DevExpress.ExpressApp": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.AuditTrail.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.CloneObject.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.CodeAnalysis": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.ConditionalAppearance": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Dashboards": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Objects": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Office": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.ReportsV2": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Security.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.StateMachine": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Validation": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.ViewVariantsModule": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.ExpressApp.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.Persistent.Base": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            },
+            "DevExpress.Persistent.BaseImpl.Xpo": {
+              "target": "Package",
+              "version": "[22.2.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

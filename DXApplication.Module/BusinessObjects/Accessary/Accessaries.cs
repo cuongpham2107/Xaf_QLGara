@@ -172,16 +172,26 @@ namespace DXApplication.Module.BusinessObjects.Accessary
             }
         }
 
-        //[Association("Bill-Accessarys")]
-        //[XafDisplayName("Danh sách Hoá đơn")]
-        //public XPCollection<Bill> Bills
-        //{
-        //    get
-        //    {
-        //        return GetCollection<Bill>(nameof(Bills));
-        //    }
-        //}
-       
+        [Association("InWarehouse-Accessarys")]
+        [XafDisplayName("Danh sách Hoá đơn nhập")]
+        public XPCollection<InWarehouse> InWarehouses
+        {
+            get
+            {
+                return GetCollection<InWarehouse>(nameof(InWarehouses));
+            }
+        }
+
+        [Association("OutWarehouse-Accessarys")]
+        [XafDisplayName("Danh sách phụ tùng xuất")]
+        public XPCollection<OutWarehouse> OutWarehouses
+        {
+            get
+            {
+                return GetCollection<OutWarehouse>(nameof(OutWarehouses));
+            }
+        }
+
     }
 
 }

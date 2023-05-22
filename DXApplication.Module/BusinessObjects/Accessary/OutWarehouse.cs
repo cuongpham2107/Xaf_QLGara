@@ -33,8 +33,14 @@ namespace DXApplication.Module.BusinessObjects.Accessary
         {
             base.AfterConstruction();
         }
+        int tongSoLuong;
+        [XafDisplayName("Tổng số lượng")]
+        public int TongSoLuong
+        {
+            get => tongSoLuong;
+            set => SetPropertyValue(nameof(TongSoLuong), ref tongSoLuong, value);
+        }
 
-       
         TrangThaiXuat trangThaiXuat;
 
         [XafDisplayName("Trạng thái")]
@@ -43,15 +49,15 @@ namespace DXApplication.Module.BusinessObjects.Accessary
             get => trangThaiXuat;
             set => SetPropertyValue(nameof(TrangThaiXuat), ref trangThaiXuat, value);
         }
-       
-        //[Association("OutWarehouse-Accessarys")]
-        //[XafDisplayName("Danh sách phụ tùng")]
-        //public XPCollection<Accessaries> Accessarys
-        //{
-        //    get
-        //    {
-        //        return GetCollection<Accessaries>(nameof(Accessarys));
-        //    }
-        //}
+
+        [Association("OutWarehouse-Accessarys")]
+        [XafDisplayName("Danh sách phụ tùng xuất")]
+        public XPCollection<Accessaries> Accessarys
+        {
+            get
+            {
+                return GetCollection<Accessaries>(nameof(Accessarys));
+            }
+        }
     }
 }

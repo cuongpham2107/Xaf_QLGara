@@ -33,6 +33,7 @@
           <Item Id="Debt_ListView" ImageName="debt" />
         </Items>
       </Item>
+      <Item Id="@2f31d002-93ac-4e02-bbd2-138a0d7c9af7" ViewId="Maps" Caption="Map" IsNewNode="True" />
       <Item Id="Reports" ImageName="BO_Report" />
       <Item Id="State Machine" QuickAccessItem="True" Visible="False" />
     </Items>
@@ -45,7 +46,7 @@
     <SchemaModule Name="SystemModule" Version="22.2.6.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
-    <DetailView Id="Accessaries_DetailView">
+    <DetailView Id="Accessaries_DetailView" ImageName="brake">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">
           <LayoutGroup Id="Detail" Caption="Chi tiết" RelativeSize="30.489731437598735">
@@ -78,12 +79,100 @@
               <LayoutItem Id="HinhAnh" ViewItem="HinhAnh" Index="0" RelativeSize="100" Removed="True" />
             </LayoutGroup>
           </LayoutGroup>
-          <LayoutGroup Id="Cars_Group" Direction="Vertical" RelativeSize="64.13902053712481">
-            <LayoutItem Id="Cars" RelativeSize="100" />
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Accessaries_ListView" ImageName="brake" />
+    <ListView Id="Accessaries_LookupListView" ImageName="brake" />
+    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <DetailView Id="Bill_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Detail" RelativeSize="18.88888888888889">
+            <LayoutGroup Id="Detail_col1" RelativeSize="50">
+              <LayoutItem Id="MaPhieu" RelativeSize="21.73913043478261" />
+              <LayoutItem Id="TenPhieu" RelativeSize="18.840579710144926" />
+              <LayoutItem Id="Ngay" RelativeSize="18.840579710144926" />
+              <LayoutItem Id="Thang" RelativeSize="18.840579710144926" />
+              <LayoutItem Id="Nam" ViewItem="Nam" Index="4" RelativeSize="21.73913043478261" IsNewNode="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Detail_col2" RelativeSize="50">
+              <LayoutItem Id="TongTien" Index="1" RelativeSize="18.840579710144926" />
+              <LayoutItem Id="GhiChu" Index="2" RelativeSize="59.42028985507246" />
+              <LayoutItem Id="Nam" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <LayoutGroup Id="CarServices_Group" Direction="Vertical" RelativeSize="81.11111111111111">
+            <LayoutItem Id="CarServices" RelativeSize="100" />
           </LayoutGroup>
         </LayoutGroup>
       </Layout>
     </DetailView>
-    <ListView Id="ApplicationUser_ListView" Caption="Users" />
+    <ListView Id="Cars_Accessarys_ListView" ImageName="brake" />
+    <ListView Id="InWarehouse_Accessarys_ListView" ImageName="brake" AutoExpandAllGroups="True" FreezeColumnIndices="True" ShowAutoFilterRow="True" IsGroupPanelVisible="True" IsFooterVisible="True" MasterDetailMode="ListViewOnly">
+      <Columns>
+        <ColumnInfo Id="Oid" Index="-1" />
+        <ColumnInfo Id="TenPhuTung" Index="0" />
+        <ColumnInfo Id="HangSanXuat" Index="1" />
+        <ColumnInfo Id="NhaCungCap" Index="2" />
+        <ColumnInfo Id="Ngay" Index="3" />
+        <ColumnInfo Id="Thang" Index="4" />
+        <ColumnInfo Id="Nam" Index="5" />
+        <ColumnInfo Id="SoLuong" Index="6" />
+        <ColumnInfo Id="GiaNhap" Index="7" />
+        <ColumnInfo Id="GiaBan" Index="8" />
+        <ColumnInfo Id="HanSuDung" Index="9" />
+        <ColumnInfo Id="HinhAnh" Index="10" />
+        <ColumnInfo Id="TinhTrang" Index="11" />
+      </Columns>
+    </ListView>
+    <DetailView Id="InWarehouse_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Detail" RelativeSize="9.777777777777779" Caption="Chi tiết">
+            <LayoutGroup Id="Detail_col1" RelativeSize="50">
+              <LayoutItem Id="MaPhieu" RelativeSize="21.787709497206706" Index="0" />
+              <LayoutItem Id="TenPhieu" RelativeSize="16.201117318435752" Index="1" />
+              <LayoutItem Id="Ngay" RelativeSize="16.201117318435752" Index="2" />
+              <LayoutItem Id="Nam" ViewItem="Nam" Index="4" RelativeSize="29.608938547486034" IsNewNode="True" />
+              <LayoutItem Id="TrangThaiNhap" RelativeSize="18.29268292682927" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Detail_col2" RelativeSize="50">
+              <LayoutItem Id="TongTien" Index="1" RelativeSize="16.201117318435752" />
+              <LayoutItem Id="TrangThaiNhap" ViewItem="TrangThaiNhap" Index="2" RelativeSize="16.201117318435752" IsNewNode="True" />
+              <LayoutItem Id="GhiChu" Index="3" RelativeSize="45.81005586592179" />
+              <LayoutItem Id="Nam" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <DashboardView Id="Maps" Caption="Maps" ImageName="BO_Localization" IsNewNode="True">
+      <Items IsNewNode="True">
+        <ControlDetailItem Id="MapsAllComponentAdapter" ControlTypeName="DXApplication.Blazor.Server.Components.MapsAllComponentAdapter" Caption="" IsNewNode="True" />
+      </Items>
+    </DashboardView>
+    <ListView Id="OutWarehouse_Accessarys_ListView" ImageName="brake" />
+    <DetailView Id="OutWarehouse_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="Detail" Caption="Chi tiết" RelativeSize="9.777777777777779">
+            <LayoutGroup Id="Detail_col1" RelativeSize="50">
+              <LayoutItem Id="MaPhieu" RelativeSize="21.787709497206706" Index="0" />
+              <LayoutItem Id="TenPhieu" RelativeSize="16.201117318435752" Index="1" />
+              <LayoutItem Id="Ngay" RelativeSize="16.201117318435752" Index="2" />
+              <LayoutItem Id="Nam" ViewItem="Nam" Index="4" RelativeSize="29.608938547486034" IsNewNode="True" />
+              <LayoutItem Id="TrangThaiXuat" RelativeSize="18.29268292682927" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="Detail_col2" RelativeSize="50">
+              <LayoutItem Id="TongTien" RelativeSize="16.201117318435752" Index="1" />
+              <LayoutItem Id="TrangThaiXuat" ViewItem="TrangThaiXuat" Index="2" RelativeSize="16.201117318435752" IsNewNode="True" />
+              <LayoutItem Id="GhiChu" RelativeSize="45.81005586592179" Index="3" />
+              <LayoutItem Id="Nam" RelativeSize="19.35483870967742" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
   </Views>
 </Application>

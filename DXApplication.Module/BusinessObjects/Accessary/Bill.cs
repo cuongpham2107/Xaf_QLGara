@@ -1,4 +1,5 @@
-﻿using DevExpress.Data.Filtering;
+﻿using DevExpress.ClipboardSource.SpreadsheetML;
+using DevExpress.Data.Filtering;
 using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.DC;
 using DevExpress.ExpressApp.Model;
@@ -7,6 +8,7 @@ using DevExpress.Persistent.BaseImpl;
 using DevExpress.Persistent.Validation;
 using DevExpress.Xpo;
 using DXApplication.Blazor.Common;
+using DXApplication.Module.BusinessObjects.Service;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,15 +34,15 @@ namespace DXApplication.Module.BusinessObjects.Accessary
         public override void AfterConstruction()
         {
             base.AfterConstruction();
-            // Place your initialization code here (https://documentation.devexpress.com/eXpressAppFramework/CustomDocument112834.aspx).
+            
         }
 
         int nam;
         int thang;
         private int tongTien;
         string ghiChu;
-        int tongSoLuong;
-        DateTime? ngay;
+        
+        DateTime ngay;
         string tenPhieu;
         string maPhieu;
         [XafDisplayName("Mã hoá đơn")]
@@ -58,29 +60,46 @@ namespace DXApplication.Module.BusinessObjects.Accessary
             set => SetPropertyValue(nameof(TenPhieu), ref tenPhieu, value);
         }
         [XafDisplayName("Ngày")]
-        public DateTime? Ngay
+        public DateTime Ngay
         {
-            get => ngay;
+            get => DateTime.Now;
             set => SetPropertyValue(nameof(Ngay), ref ngay, value);
         }
         [XafDisplayName("Tháng")]
         public int Thang
         {
-            get => thang;
+            get
+            {
+                if (!IsLoading && !IsSaving)
+                {
+                    if (Ngay != null)
+                    {
+                        return Ngay.Month;
+                    }
+                }
+                return 0;
+
+            }
             set => SetPropertyValue(nameof(Thang), ref thang, value);
         }
         [XafDisplayName("Năm")]
         public int Nam
         {
-            get => nam;
+            get
+            {
+                if (!IsLoading && !IsSaving)
+                {
+                    if (Ngay != null)
+                    {
+                        return Ngay.Year;
+                    }
+                }
+                return 0;
+
+            }
             set => SetPropertyValue(nameof(Nam), ref nam, value);
         }
-        [XafDisplayName("Tổng số lượng")]
-        public int TongSoLuong
-        {
-            get => tongSoLuong;
-            set => SetPropertyValue(nameof(TongSoLuong), ref tongSoLuong, value);
-        }
+       
 
         [XafDisplayName("Tổng tiền")]
         public int TongTien
@@ -94,6 +113,15 @@ namespace DXApplication.Module.BusinessObjects.Accessary
         {
             get => ghiChu;
             set => SetPropertyValue(nameof(GhiChu), ref ghiChu, value);
+        }
+        [Association("Bill-CarServices")]
+        [XafDisplayName("Danh sách dịch vụ")]
+        public XPCollection<CarService> CarServices
+        {
+            get
+            {
+                return GetCollection<CarService>(nameof(CarServices));
+            }
         }
     }
 }

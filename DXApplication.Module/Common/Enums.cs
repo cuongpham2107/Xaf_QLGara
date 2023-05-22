@@ -29,4 +29,11 @@ public class Enums{
         [XafDisplayName("Phải thu")] phaiThu = 0,
         [XafDisplayName("Phải trả")] phaiTra = 1,
     }
+    public enum TrangThaiXe
+    {
+        [XafDisplayName("Lưu tạm")] luuTam = 0,
+        [XafDisplayName("Đang sử dụng dịch vụ")] dangSDDV = 1,
+        [XafDisplayName("Chờ thanh toán")] choThanhToan = 2,
+        [XafDisplayName("Hoành thành")] hoanThanh = 3,
+    }
 }

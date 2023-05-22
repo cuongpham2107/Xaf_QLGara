@@ -1,0 +1,35 @@
+﻿<style>
+    .main-toolbar {
+        display: none;
+    }
+</style>
+@using DXApplication.Module.BusinessObjects;
+@using Microsoft.AspNetCore.Components.Web
+@inject IJSRuntime JSRuntime
+@inject DevExpress.ExpressApp.Blazor.Services.IXafApplicationProvider ApplicationProvider
+
+
+<div id="map" style="height:900px;width:100%;"></div>
+
+@code {
+    private DevExpress.ExpressApp.IObjectSpace objectSpace;
+    private IEnumerable<Item> GetData()
+    {
+        return objectSpace.GetObjects<Location>().Select(item => new Item { TD = item.TieuDe, ToaDo = item.ToaDo});
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            var app = ApplicationProvider.GetApplication();
+            objectSpace = app.CreateObjectSpace(typeof(Location));
+            await JSRuntime.InvokeVoidAsync("init", GetData(), DotNetObjectReference.Create(this));
+        }
+    }
+
+    public class Item
+    {
+        public string TD { get; set; }
+        public string ToaDo { get; set; }
+    }
+}

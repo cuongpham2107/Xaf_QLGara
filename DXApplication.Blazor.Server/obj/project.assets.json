@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net7.0": {
       "DevExpress.AspNetCore.Common/22.2.6": {
         "type": "package",
         "dependencies": {
@@ -2543,16 +2543,16 @@
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "compile": {
-          "lib/net6.0/MySql.Data.dll": {
+          "lib/net7.0/MySql.Data.dll": {
             "related": ".xml"
           },
-          "lib/net6.0/ZstdNet.dll": {}
+          "lib/net7.0/ZstdNet.dll": {}
         },
         "runtime": {
-          "lib/net6.0/MySql.Data.dll": {
+          "lib/net7.0/MySql.Data.dll": {
             "related": ".xml"
           },
-          "lib/net6.0/ZstdNet.dll": {}
+          "lib/net7.0/ZstdNet.dll": {}
         }
       },
       "NETStandard.Library/2.0.3": {
@@ -9181,7 +9181,7 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net7.0": [
       "DXApplication.Module >= 1.0.0",
       "DevExpress.ExpressApp.Blazor >= 22.2.6",
       "DevExpress.ExpressApp.CodeAnalysis >= 22.2.6",
@@ -9195,28 +9195,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cuong\\.nuget\\packages\\": {},
+    "C:\\Users\\phamcuong\\.nuget\\packages\\": {},
     "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Blazor.Server\\DXApplication.Blazor.Server.csproj",
+      "projectUniqueName": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Blazor.Server\\DXApplication.Blazor.Server.csproj",
       "projectName": "DXApplication.Blazor.Server",
-      "projectPath": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Blazor.Server\\DXApplication.Blazor.Server.csproj",
-      "packagesPath": "C:\\Users\\cuong\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Blazor.Server\\obj\\",
+      "projectPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Blazor.Server\\DXApplication.Blazor.Server.csproj",
+      "packagesPath": "C:\\Users\\phamcuong\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Blazor.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\phamcuong\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -9224,11 +9224,11 @@
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Module\\DXApplication.Module.csproj": {
-              "projectPath": "C:\\Users\\cuong\\source\\repos\\XAF_QuanLyGARA\\DXApplication.Module\\DXApplication.Module.csproj"
+            "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj": {
+              "projectPath": "C:\\Users\\phamcuong\\source\\repos\\Xaf_QLGara\\DXApplication.Module\\DXApplication.Module.csproj"
             }
           }
         }
@@ -9240,8 +9240,8 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "DevExpress.ExpressApp.Blazor": {
             "target": "Package",
